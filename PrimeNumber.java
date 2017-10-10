@@ -12,7 +12,10 @@ public class PrimeNumber {
     }
 
     public static boolean isPrime(){
-        if ( userinput > 2 && userinput%2 == 0 ) {
+        if ( userinput < 1) {
+            return false;
+        }
+        if ( userinput > 2 && userinput%2 == 0 || userinput == 1) {
             return false;
         }
         int top = (int)Math.sqrt(userinput) + 1;
